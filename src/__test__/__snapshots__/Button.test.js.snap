@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders button component with props 1`] = `
+<DocumentFragment>
+  <button
+    class="btn btn-dark"
+    id="textButton"
+  >
+    Hello!
+  </button>
+</DocumentFragment>
+`;
