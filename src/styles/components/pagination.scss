@@ -1,0 +1,25 @@
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  &-button {
+    background: transparent;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: $border-radius;
+    color: $orange;
+    border-color: currentColor;
+    font-size: $font-size-xs;
+    margin-left: 10px;
+    margin-right: 10px;
+    &.active {
+      background: rgba($orange, .5);
+      color: $dark;
+      border-color: $orange;
+    }
+    &:hover {
+      background: $orange;
+      color: $dark;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.emptyList {
+  border: 1px solid $orange;
+  padding: 20px;
+  border-radius: $border-radius;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba($orange, .4);
+  color: #000;
+}
+
+.itemList {
+  width: 100%;
+  .linkContent {
+    position: relative;
+    &:hover {
+      .deleteAction {
+        position: absolute;
+        right: -10px;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+      }
+    }
+  }
+  .linkItem {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-gap: 40px;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+      background: $dark;
+      border-radius: $border-radius;
+    }
+
+    .point {
+      border: 1px solid $orange;
+      border-radius: $border-radius;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: $orange;
+      h2 {
+        font-size: $font-size-lg;
+        word-break: break-all;
+        white-space: normal;
+      }
+      span {
+        margin-top: 10px;
+        font-size: $font-size-sm;
+      }
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      .name {
+        margin-bottom: 5px;
+      }
+      .link {
+        color: $grayLight;
+      }
+
+      .actions {
+        display: flex;
+        .btn {
+          span {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .deleteAction {
+    display: none;
+    color: $white;
+    background: $danger;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+  }
+
+}

@@ -1,0 +1,123 @@
+.btn {
+  border-radius: $border-radius-lg;
+  min-height: 48px;
+  min-width: 100px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    opacity: .7;
+  }
+  &:disabled {
+    opacity: .5;
+  }
+  &-noStyle {
+    min-width: max-content;
+    min-height: max-content;
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: inherit;
+  }
+  &-dark {
+    background: $dark;
+    color: $white;
+  }
+}
+
+.text{
+  &-right{text-align: right !important;}
+  &-center{text-align: center !important;}
+  &-left{text-align: left !important;}
+  &-uppercase { text-transform:  uppercase;}
+  &-underline{
+    text-decoration: underline !important;
+
+    &-hover{
+      &:hover{text-decoration: underline !important;}
+
+      &-none{
+        &:hover{text-decoration: none !important;}
+      }
+    }
+    &-none{text-decoration: none !important;}
+  }
+
+  &-linethrough{
+    text-decoration: line-through;
+  }
+}
+
+.flex {
+  display: flex !important;
+
+  &-inline{display: inline-flex !important;}
+
+  &-top {margin-bottom: auto;}
+  &-left {margin-right: auto;}
+  &-bottom {margin-top: auto;}
+  &-right {margin-left: auto;}
+
+  &-align{
+    &-start{align-items: start;}
+    &-center{align-items: center;}
+    &-end{align-items: flex-end;}
+    &-stretch{align-items: stretch !important;}
+    &-baseline{ align-items: baseline }
+  }
+
+  &-align-self{
+    &-start{align-self: start;}
+    &-center{align-self: center;}
+    &-end{align-self: flex-end;}
+    &-stretch{align-self: stretch !important;}
+    &-baseline{ align-self: baseline }
+  }
+  
+  &-justify{
+    &-start{justify-content: start !important;}
+    &-center{justify-content: center !important;}
+    &-end{justify-content: flex-end !important;}
+    &-stretch{justify-content: stretch !important;}
+    &-space-between{justify-content: space-between !important;}
+  }
+
+  &-dir{
+    &-col{ flex-direction: column; }
+    &-row{ flex-direction: row; }
+  }
+
+  &-primary{flex: 1;}
+  &-nowrap{flex-wrap: nowrap !important;}
+}
+
+.m{
+  @each $val in (0, 2, 5, 10, 15, 20, 25, 30) {
+    &-#{$val} {margin: #{$val}px !important;}
+
+    &-h-#{$val} {
+      margin-left: #{$val}px !important;
+      margin-right: #{$val}px !important;
+    }
+    &-v-#{$val} {
+      margin-top: #{$val}px !important;
+      margin-bottom: #{$val}px !important;
+    }
+
+    @each $dir in (top, left, bottom, right) {
+      &-#{$dir}{
+        &-#{$val} {
+          margin-#{$dir}: #{$val}px !important;
+        }
+      }
+    }
+  }
+}
+
+.font {
+  &-xxl{font-size: $font-size-xxl;}
+  &-xl{font-size: $font-size-xl;}
+  &-lg{font-size: $font-size-lg;}
+  &-sm{font-size: $font-size-sm;}
+  &-xs{font-size: $font-size-xs;}
+}

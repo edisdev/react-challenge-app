@@ -1,0 +1,2 @@
+export const STATE_LIST_NAME = 'LINK_VOTE_LIST'
+export const STATE_ORDER_NAME = 'LINK_VOTE_ORDER'

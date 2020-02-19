@@ -1,0 +1,54 @@
+.Modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &,
+  .Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+  }
+  .Overlay {
+    opacity: .4;
+    background: $gray;
+  }
+
+  .Self {
+    max-width: 600px;
+    max-height: 300px;
+    width: 100%;
+    background: $dark;
+    opacity: 1;
+    z-index: 999;
+    border-radius: $border-radius;
+  }
+
+  &Header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 1.3em;
+    background: $orange;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+
+  &Content {
+    padding: 30px;
+    text-align: center;
+  }
+
+  &Footer {
+    padding: 30px;
+    .actions {
+      display: flex;
+      justify-content: center;
+      .btn:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+}

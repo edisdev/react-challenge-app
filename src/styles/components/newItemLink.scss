@@ -1,0 +1,31 @@
+.newItemLink {
+  padding: 30px;
+  min-width: 30%;
+  min-height: 100px;
+  &::after {
+    display: block;
+    content: "";
+    height: 5px;
+    width: 100%;
+    border-radius: $border-radius;
+    background: rgba($darkgray, .4);
+  }
+
+  &Content {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    background: $darkgray;
+    padding: 30px;
+    border-radius: $border-radius;
+  }
+
+  &Href {
+    border: 1px solid $white;
+    display: flex;
+    padding: 20px;
+    font-size: 3em;
+    margin-right: 50px;
+    border-radius: $border-radius;
+  }
+}

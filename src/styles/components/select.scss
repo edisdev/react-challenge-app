@@ -1,0 +1,27 @@
+.SelectBox {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  background: $white;
+  padding: 10px;
+  min-width: 130px;
+  border-radius: $border-radius;
+  select {
+    appearance: none;
+    font-size: $font-size-xs;
+    border: none;
+    flex: 1;
+    outline: none;
+  }
+
+  .ArrowDown {
+    display: block;
+    height: 14px;
+    width: 14px;
+    background-color: $dark;
+    border: inherit;
+    clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+    transform: rotate(-45deg) translateY(-4px);
+    border-radius: 0 0 0 0.15em;
+  }
+}

@@ -1,0 +1,31 @@
+.Header {
+  min-height: 80px;
+  background: $dark;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  .container {
+    display: flex;
+    align-items: center;
+    min-height: inherit;
+  }
+
+  .flex {
+    &-left {
+      flex: 1;
+      .logo {
+        font-size: $font-size-xl;
+        color: $orange;
+      }
+    }
+
+    &-right {
+      .linkVote {
+        span {
+          font-weight: 200;
+        }
+      }
+    }
+  }
+}

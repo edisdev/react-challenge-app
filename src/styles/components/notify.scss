@@ -1,0 +1,41 @@
+.notify {
+  min-height: 20px;
+  max-width: 100%;
+  font-weight: 500;
+  font-size: 1.1em;
+  display: flex;
+  border-radius: $border-radius;
+  align-items: center;
+  &Icon {
+    border-right: 1px solid;
+    background: $white;
+    padding: 10px;
+    font-size: 3em;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+  }
+  &Content {
+    margin-left: 10px;
+    text-align: center;
+    flex: 1;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  &.success {
+    background: $success;
+    color: lighten($success, 60);
+  }
+  &.error {
+    background: $danger;
+    color: lighten($danger, 50);
+  }
+  &.info {
+    background: $info;
+    color: darken($info, 30);
+  }
+  &.warning {
+    background: $warning;
+    color: darken($warning, 30);
+  }
+}
