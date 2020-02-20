@@ -78,7 +78,7 @@ export default ({ item, storage }) => {
             <Button
               type="button"
               id="voteDownButton"
-              className="btn-noStyle m-left-20"
+              className="btn-noStyle"
               onClick={() => updateItemVote(-1)}>
               <PointDown/>
               <span>Vote Down</span>

@@ -14,11 +14,12 @@
   width: 100%;
   .linkContent {
     position: relative;
+    width: 100%;
     &:hover {
       .deleteAction {
         position: absolute;
         right: -10px;
-        top: 0;
+        top: 0px;
         display: flex;
         align-items: center;
         justify-content: center; 
@@ -26,9 +27,9 @@
     }
   }
   .linkItem {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 15px;
     display: grid;
     grid-template-columns: 100px 1fr;
     grid-gap: 40px;
@@ -73,7 +74,12 @@
 
       .actions {
         display: flex;
+        flex-wrap: wrap;
         .btn {
+          margin-top: 20px;
+          &:first-child {
+            margin-right: 20px;
+          }
           span {
             margin-left: 5px;
           }
