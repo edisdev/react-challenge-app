@@ -3,6 +3,7 @@ import {
   STATE_ORDER_NAME 
 } from './constant'
 
+import DummyList from '../data/dummy-list'
 export default class Data {
   constructor({ list, setList = () => {}, order = { field: 'createdAt', direction: 'desc', type: 'date'}, setOrder = () => {} }) {
     this.order = order;
@@ -12,6 +13,7 @@ export default class Data {
   }
 
   init () {
+    this.addMultiItems(DummyList)
     this.setList(this.sortedList());
   }
 
@@ -60,7 +62,13 @@ export default class Data {
     return (JSON.parse(localStorage.getItem(STATE_LIST_NAME)) || [])
   }
 
+  addMultiItems (items) {
+    let currentList = this.getItems().map(_ => _.id)
+    let newItems = items.filter(_ => !currentList.includes(_.id))
+    this.setItems([...this.getItems(), ...newItems])
+  }
   addItem (newItem) {
+    if (this.findItem(newItem)) return
     this.list.push(newItem)
     this.setItems(this.list)
   }
